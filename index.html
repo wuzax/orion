@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orion Client – Minecraft Java 1.8.9 launcher</title>
+<meta name="description" content="Orion Client is a launcher and client for Minecraft: Java Edition 1.8.9, built on Forge, with official Microsoft account sign-in.">
+<style>
+  :root { --bg:#09090B; --panel:#131318; --border:#27272F; --text:#EDEDF2; --muted:#A1A1AA; --accent:#8B5CF6; --accent2:#A78BFA; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: radial-gradient(1200px 600px at 20% -10%, #2a1650 0%, transparent 60%), var(--bg); color:var(--text); line-height:1.6; }
+  main { max-width: 920px; margin: 0 auto; padding: 56px 24px 72px; }
+  .logo { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2em; font-size:14px; color:var(--accent2); }
+  .dot { width:14px; height:14px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #c4b5fd, var(--accent)); box-shadow:0 0 18px var(--accent); }
+  h1 { font-size: clamp(32px, 5vw, 48px); margin: 18px 0 8px; line-height:1.15; }
+  h2 { font-size: 22px; margin: 40px 0 10px; color: var(--accent2); }
+  p, li { color: var(--muted); }
+  strong { color: var(--text); }
+  .lead { font-size: 18px; max-width: 700px; }
+  .badge { display:inline-block; padding:4px 12px; border:1px solid var(--accent); border-radius:999px; color:var(--accent2); font-size:13px; margin-top:8px; }
+  .shot { margin-top: 32px; border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow: 0 20px 60px rgba(139,92,246,.18); }
+  .shot img { display:block; width:100%; height:auto; }
+  .card { background: var(--panel); border:1px solid var(--border); border-radius:12px; padding: 18px 22px; margin-top: 14px; }
+  ol, ul { padding-left: 22px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+  a { color: var(--accent2); }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo"><span class="dot"></span>ORION CLIENT</div>
+  <h1>A launcher and client for Minecraft: Java Edition 1.8.9</h1>
+  <p class="lead">Orion Client is a desktop launcher (Windows, macOS, Linux) that installs and starts Minecraft: Java Edition 1.8.9 with Forge and the Orion mod, which adds a customizable HUD, quality-of-life modules and profiles.</p>
+  <span class="badge">In active development</span>
+
+  <div class="shot"><img src="launcher.png" alt="Screenshot of the Orion Client launcher home page"></div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Downloads the official Minecraft 1.8.9 files, libraries and assets from Mojang's servers and verifies their hashes.</li>
+    <li>Installs Forge 1.8.9 and the Orion mod, then starts the game with a Java 8 runtime.</li>
+    <li>Lets players manage profiles, mods, memory settings and an in-game HUD editor.</li>
+  </ul>
+
+  <h2>How Microsoft sign-in is used</h2>
+  <div class="card">
+    <p>Orion Client uses the <strong>official Microsoft account sign-in</strong> so that only players who own Minecraft: Java Edition can play. The flow is the standard one:</p>
+    <ol>
+      <li>The player signs in with their Microsoft account in Microsoft's own sign-in page.</li>
+      <li>The launcher exchanges the token with Xbox Live and XSTS.</li>
+      <li>It calls the Minecraft services to log in, check game ownership and read the player profile (username, UUID, skin).</li>
+    </ol>
+    <p>Tokens are stored <strong>only on the player's computer</strong>, encrypted with the operating system's secure storage. They are sent only to Microsoft, Xbox Live and Minecraft services, never to third parties. The player can sign out at any time, which deletes the stored tokens.</p>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Developer: <a href="https://github.com/wuzax">wuzax on GitHub</a></p>
+
+  <footer>
+    Orion Client is an independent project. It is not an official Minecraft product and is not approved by or associated with Mojang or Microsoft. Minecraft is a trademark of Mojang Synergies AB.
+  </footer>
+</main>
+</body>
+</html>
